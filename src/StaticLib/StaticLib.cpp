@@ -3,8 +3,25 @@
 
 #include "../include/lib_func.h"
 
+void swap(item* p, item* q)
+{
+	item tmp = *p;
+	*p = *q;
+	*q = tmp;
+}
+
 // バブルソート(引数が不適切であればfalseを返す)
 bool bubble_sort(item* begin, const item* end)
 {
-	return false;
+	if (begin == NULL || end < begin) return false;
+
+	for (item* p = begin; p != end - 1; p++) {
+		for (item* q = begin + (end - begin - 1); q != p; q--) {
+			if (q->key < p->key) {
+				swap(p, q);
+			}
+		}
+	}
+
+	return true;
 }

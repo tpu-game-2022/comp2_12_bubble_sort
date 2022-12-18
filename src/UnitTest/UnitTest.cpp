@@ -61,6 +61,7 @@ namespace UnitTest
 		TEST_METHOD(たくさんの要素を入れ替え)
 		{
 			const int NUM = 100000;
+
 			item *items = (item*)malloc(sizeof(item) * NUM);
 			if (NULL == items) { Assert::Fail(); return; }
 

@@ -3,8 +3,6 @@
 
 #include "../include/lib_func.h"
 
-
-#include<stdio.h>
 // バブルソート(引数が不適切であればfalseを返す)
 bool bubble_sort(item* begin, const item* end)
 {

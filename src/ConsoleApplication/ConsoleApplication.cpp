@@ -17,4 +17,6 @@ int main()
 	for (int i = 0; i < NUM; i++) {
 		printf_s("%d\n", items[i].key);
 	}
+
+	return 0;
 }
